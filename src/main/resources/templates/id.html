@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Khai bao namespace de dung th:* --> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Thong Tin Sinh Vien</title> 
+        <!-- CSS don gian -->
+        <style>
+            body { font-family: sans-serif; padding: 20px; }
+            a { text-decoration: none; }
+            label { display: inline-block; width: 50px; }
+            t { margin: 4px; }
+            button { margin: 10px; margin-left: 0px; }
+        </style> 
+    </head> 
+    <body>
+        <h1>Thong Tin Sinh Vien</h1>
+        <div th:object="${sinhVien}" style="line-height: 1.5;">
+            <label>ID:</label>
+            <t th:text="*{id}"/>
+            <br>
+            <label>Name:</label>
+            <t th:text="*{name}"/>
+            <br>
+            <label>Email:</label>
+            <t th:text="*{email}"/>
+            <br>
+            <label>Age:</label>
+            <t th:text="*{age}"/>
+            <br>
+            
+            <a th:href="@{/students/{id}/edit(id=*{id})}">
+                <button type="button">Chinh sua</button>
+            </a>
+            <button type="submit" th:onclick="deleteStudent([[*{id}]])">Xoa</button>
+        </div>
+        <script>
+            function deleteStudent(id) {
+                if (confirm("Xac nhan xoa " + id + "?")) {
+                    fetch('/students/' + id + '/delete', {
+                        method: 'POST'
+                    }).then(() => {
+                        window.location.replace('/students');
+                    });
+                }
+            }
+        </script>
+    </body> 
+</html>

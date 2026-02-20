@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"> <!-- Khai bao namespace de dung th:* --> 
+    <head>
+        <meta charset="UTF-8">
+        <title>Chinh Sua</title> 
+        <style>
+            body { font-family: sans-serif; padding: 20px; }
+            label { display: inline-block; width: 50px; }
+            input { margin: 4px; }
+            button { margin: 4px; margin-left: 0px; }
+        </style> 
+    </head> 
+    <body>
+        <h1>Chinh Sua</h1>
+        <form th:action="@{/students/{id}/edit(id=*{id})}" th:object="${sinhVien}" method="POST">
+            <label>ID:</label>
+            <input type="text" th:field="*{id}" required/>
+            <br>
+            <label>Name:</label>
+            <input type="text" th:field="*{name}" required/>
+            <br>
+            <label>Email:</label>
+            <input type="text" th:field="*{email}" required/>
+            <br>
+            <label>Age:</label>
+            <input type="number" th:field="*{age}" required/>
+            <br>
+            <button type="submit">Chinh sua</button> 
+        </form>
+    </body> 
+</html>
