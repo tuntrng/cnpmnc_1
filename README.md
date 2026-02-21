@@ -51,7 +51,7 @@ Lab1:
  - Thử Insert một sinh viên nhưng bỏ trống cột name (để NULL).
  - Database có báo lỗi không? Từ đó suy nghĩ xem sự thiếu chặt chẽ này ảnh hưởng gì khi code Java đọc dữ liệu lên?
 
-&rarr; Database không hiện lỗi bởi vì không có ràng buộc rằng trường name cần phải tồn tại giá trị. Nhưng việc không thiết đặt ràng buộc sẽ khiến lỗi nhập lệnh dễ xảy ra cũng như sai xót dữ liệu. Đồng thời nếu ứng dụng cố đọc những giữ liệu khuyết như này thì khi cần phải sử dụng một số phương thức cụ thể (ví dụ như length() hoặc isEmpty() với trường String name). Tuy nhiên, đối với bài lab này thì việc nhập thiếu trường name không ảnh hưởng đáng kể đến vận hành của hệ thống (cùng lắm là ảnh hưởng đến việc tham chiếu đến students/{id} như trong bài làm này).
+&rarr; Database không hiện lỗi bởi vì không có ràng buộc rằng trường name cần phải tồn tại giá trị. Nhưng việc không thiết đặt ràng buộc sẽ khiến lỗi nhập lệnh dễ xảy ra cũng như sai xót dữ liệu. Đồng thời nếu ứng dụng cố đọc những giữ liệu khuyết như này thì khi cần phải sử dụng một số phương thức cụ thể (ví dụ như length() hoặc isEmpty() với trường String name) sẽ gây lỗi. Tuy nhiên, đối với bài lab này thì việc nhập thiếu trường name không ảnh hưởng đáng kể đến vận hành của hệ thống (cùng lắm là ảnh hưởng đến việc tham chiếu đến students/{id} như trong bài làm này).
 
 4. Cấu hình Hibernate:
  - Tại sao mỗi lần tắt ứng dụng và chạy lại, dữ liệu cũ trong Database lại bị mất hết?
