@@ -60,7 +60,7 @@ Lab1:
 
 	spring.jpa.hibernate.ddl-auto=create
 
-Tức là mỗi khi hệ thống reset, hệ thống sẽ lập tức làm mới Database, cũng tức là xóa hết và tạo mới một Database rỗng, khiếnn cho toàn bộ dữ liệu bị mất hết.
+Tức là mỗi khi hệ thống reset, hệ thống sẽ lập tức làm mới Database, cũng tức là xóa hết và tạo mới một Database rỗng, khiến cho toàn bộ dữ liệu bị mất hết.
 
 Screenshot các module:
 
