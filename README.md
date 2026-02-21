@@ -14,7 +14,7 @@ Nếu có Docker có thể build trực tiếp:
 2. Gõ lệnh docker "run -p 8080:8080 student-management" để chạy (có thể thêm các environment variable như database url, username và password).
 
 Trả lời lý thuyết:
-Lab1: 
+Lab1: \n
 2. Ràng buộc Khóa Chính (Primary Key):
 • Cố tình Insert một sinh viên có id trùng với một người đã có sẵn.
 • Quan sát thông báo lỗi: UNIQUE constraint failed. Tại sao Database lại chặn thao tác này?
