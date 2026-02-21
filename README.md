@@ -24,7 +24,7 @@ student-management
  │   │   │        └── StudentManagementApplication.java
  │   │   └── resources
  |   |       └── application.properties
- |	   test
+ |	 └── test
  └── target
  ```
  
